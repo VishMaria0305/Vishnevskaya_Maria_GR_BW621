@@ -1,0 +1,14 @@
+1. C:\Users\Mari\Documents\BV621 Создаем папку BV621 
+2. C:\Users\Mari\Documents\BV621 создаем текст файл tak_tak.txt
+$ git status проверяем что файл добавился
+3. $ git init инициализируем репозиторий
+4. $ git config --global user.name "Maria" настраиваем Имя
+5. $ git config --global user.email "solomapoloma@yandex.ru" настаиваем Почту
+6. $ git add tak_tak.txt 
+   $ git commit -m "first commit"  делаем коммит $ git status проверяем
+7. $ git remote add origin https://github.com/VishMaria0305/mouse.git 
+   $ git push -u origin main связали 
+
+
+
+
