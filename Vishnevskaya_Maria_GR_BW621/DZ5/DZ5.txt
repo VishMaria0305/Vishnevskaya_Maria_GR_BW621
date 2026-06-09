@@ -1,0 +1,26 @@
+1. PS C:\Users\Mari> New-Item -Path "C:\Users\Mari" -Name PS_Homework -ItemType Directory (создаем в дом. каталоге папку PS_Homework)
+2. PS C:\Users\Mari> Set-Location -Path "C:\Users\Mari\PS_Homework" (переходим  вданную папку)
+3. PS C:\Users\Mari\PS_Homework> New-Item -Name "PS_Homework" -ItemType Directory (текущий каталог изменился коректно)
+4. PS C:\Users\Mari\PS_Homework> New-Item -Path "C:\Users\Mari\PS_Homework" -Name Reports -ItemType Directory
+   PS C:\Users\Mari\PS_Homework> New-Item -Path "C:\Users\Mari\PS_Homework" -Name Archive -ItemType Directory
+   PS C:\Users\Mari\PS_Homework\Archive> New-Item -Path "C:\Users\Mari\PS_Homework\Archive" -Name Temp -Item Directory (создаем структуру каталогов)
+5. Создаем три текст файла с текстом
+6. PS C:\Users\Mari\PS_Homework\Reports> New-Item -Path "C:\Users\Mari\PS_Homework\Reports" -Name "report_2024.txt" -ItemType File -Value "Годовой отчет"
+7. PS C:\Users\Mari\PS_Homework\Reports> New-Item -Path "C:\Users\Mari\PS_Homework\Reports" -Name "report_2025.txt" -ItemType File -Value "Промежуточный отчет"
+8. PS C:\Users\Mari\PS_Homework\Reports> New-Item -Path "C:\Users\Mari\PS_Homework\Reports" -Name "notest.txt" -ItemType File -Value "Заметки" 
+9. PS C:\Users\Mari\PS_Homework\Archive\Temp> New-Item -Path "C:\Users\Mari\PS_Homework\Archive\Temp" -Name "temp_data.log" -ItemType File -Value "Тырыпыры" (тоже создаем файл с протизв. текстом)
+10. PS C:\Users\Mari\PS_Homework\Archive\Temp> $Year = 2025 (создаем переменную)
+11. PS C:\Users\Mari\PS_Homework\Archive\Temp> $IsValid = ($Year -gt 2020) -and ($Year -lt 2030) (создаем переменную, присваеваем ей результат логической проверки)
+12. PS C:\Users\Mari\PS_Homework\Archive\Temp> Write-Host "Удовлетворяет условию (2020 < Year < 2030): $isValid"
+Удовлетворяет условию (2020 < Year < 2030): True (выводим значение)
+13. PS C:\Users\Mari\PS_Homework\Archive\Temp> $textfiles = Get-ChildItem -Path $folderPath -File | Where-Object { $_.Name -like "*txt" } (получаем список файлов txt, сохраняем результат в переменную)
+14. PS C:\Users\Mari\PS_Homework\Archive\Temp> $TextFiles.Count (выводим кол-во файлов)
+15. PS C:\Users\Mari\PS_Homework\Archive\Temp> $Reportfiles = $TextFile | Where-Object { $_.Name -Like "*report*" }
+    PS C:\Users\Mari\PS_Homework\Archive\Temp> $textfiles | Select-Object Name ( фильтруем имена report, сохраняем)
+16. PS C:\Users\Mari\PS_Homework\Archive\Temp> Copy-Item -Path "C:\Users\Mari\PS_Homework\Reports\notest.txt" -Destination "C:\Users\Mari\PS_Homework\Archive\notes_backup.txt" (копируем файл в др. папку, изменив имя)
+17. PS C:\Users\Mari\PS_Homework\Archive\Temp> Rename-Item -Path "C:\Users\Mari\PS_Homework\Reports\notest.txt" -NewName "notest_final.txt" (переименовываем файл в исходной папке)
+18. PS C:\Users\Mari\PS_Homework\Archive\Temp> Get-ChildItem -Path  "C:\Users\Mari\PS_Homework\Archive\Temp\*.log" |Move-Item -Destination "C:\Users\Mari\PS_Homework" (перемещаем файл в корень)
+19. PS C:\Users\Mari\PS_Homework\Archive\Temp> Remove-Item -Path "C:\Users\Mari\PS_Homework\Archive\Temp" -Recurse -WhatIf (dsgjkzytv rjvfyle WhatIt)
+20. PS C:\Users\Mari\PS_Homework\Archive> Remove-Item -Path "C:\Users\Mari\PS_Homework\Archive\Temp" -Recurse (удаляем папку Темп)
+21. PS C:\Users\Mari\PS_Homework\Archive> Get-ChildItem -Path "C:\Users\Mari\PS_Homework" -Recurse (рекурсивный список все остав. объектов)
+22.PS C:\Users\Mari\PS_Homework\Archive> cd "C:\Users\Mari" (возвращаемся в каталог из которго был начат сеанс)
