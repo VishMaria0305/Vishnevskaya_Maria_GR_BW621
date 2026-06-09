@@ -1,0 +1,49 @@
+Microsoft Windows [Version 10.0.19045.6456]
+
+(с) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+C: \Users \Mari>d Documents
+
+C: \Users \Mari\Documents>mkdir CMD HomeWork
+
+C: \Users\Mari\Documents>cd CMD_HomeWork
+
+C: \Users \Mari \Documents \CMD_HomeWork>mkdir Results
+
+C: \Users \Mari \Documents \CMD_HomeWork>cd Results
+
+C: \Users \Mari \Documents \CMD_Homework\Results>NUL> tasks.txt
+
+Отказано в доступе.
+
+C: \Users \Mari \Documents \CMD_HomeWork\Results>cd
+
+C: \Users \Mari\Documents\CMD_HomeWork\Results
+
+C: \Users \Mari \Documents \CMD_HomeWork\Results>cd \
+
+C: \echo %05%
+
+Windows_NT
+
+C: \echo %USERNAME%
+
+Mari
+
+C: \>echo %COMPUTERNAME% DESKTOP-BUDBOUQ
+
+C:\>C:\Users\Mari\Documents\CMD_HomeWork\Results
+
+"C: \Users \Mari \Documents \CMD_HomeWork\Results" не является внутренней или внешней
+
+командой, исполняемой программой или пакетным файлом.
+
+C:\>cd C: \Users\Mari \Documents\CMD_HomeWork\Results
+
+C: \Users Mari \Documents \CMD_HomeWork \Results>echo Windows_NT > tasks.txt
+
+C: \Users \Mari \Documents\ CMD_HomeWork\Results>echo Mari > tasks.txt
+
+C: \Users \Mari \Documents \CMD_HomeWork\Results>echo DESKTOP-BUDOUQ > tasks.txt
+
+ 
