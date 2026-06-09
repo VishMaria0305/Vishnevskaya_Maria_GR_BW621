@@ -1,0 +1,19 @@
+1. PS C:\Users\Mari> $PSVersionTable (узнаем инфу о текущей сессии)
+1.1 PS C:\Users\Mari> $PSVersionTable.PSVersion (узнаем версию среды) 
+2. PS C:\Users\Mari> New-Item -Path $HOME -Name PS_Lab_FS -ItemType Directory (создаем нужную папку)
+3. PS C:\Users\Mari> Set-Location -Path "C:\Users\Mari\PS_Lab_FS"
+PS C:\Users\Mari\PS_Lab_FS> Get-Location
+C:\Users\Mari\PS_Lab_FS (переходим нужную папку)
+4. PS C:\Users\Mari\PS_Lab_FS> New-Item -Name "Reports" -ItemType Directory  (текущий каталог изменился коректно)
+5. PS C:\Users\Mari\PS_Lab_FS> Set-Location -Path "C:\Users\Mari\PS_Lab_FS\Reports" (создаем папку Report)
+6. PS C:\User\Mari\PS_Lab_FS\Reports> New-Item "Archive" -ItemType Directory (создаем паку Archive)
+7. PS C:\Users\Mari\PS_Lab_FS\Reports> New-Item -Path "data.txt" -ItemType "File" -Value "I love SPB" (в созданой папке создаем .txt сс текстом)
+8. PS C:\Users\Mari\PS_Lab_FS\Reports> Copy-Item ".\data.txt" "C:\User\Mari\PS_Lab_FS\Reports\Archive\data_buckup.txt" (копируем файл data.txt, изменив имя на data_buckup.txt
+9.PS C:\Users\Mari\PS_Lab_FS\Reports> Rename-Item Path "data.txt" -NewName "data_final.txt" (переименовываем исходный файл в Reports в data_final.txt)
+10.PS C:\Users\Mari\PS_Lab_FS\Reports> Move-Item -Path "data_final.txt" Destination "C:\User\Mari\PS_Lab_FS" (перемещаем файл в корень)
+11.PS C:\Users\Mari\PS_Lab_FS\Reports> Get-ChildItem -Path "C:\User\Mari\PS_Lab_FS" (рекурсивный список всех объектов в папке PS_Lab_FS)
+12.PS C:\Users\Mari\PS_Lab_FS\Reports> Rename-Item Path "Archive" -Recurse -WhatIt   (команда с параметром -Whatlf)
+12.1 PS C:\Users\Mari\PS_Lab_FS\Reports> Rename-Item Path "Archive" -Recurse
+13 PS C:\Users\Mari\PS_Lab_FS\Reports> cd.. (вернуться в каталог из которого был начат сеанс Mari)
+13.1 PS C:\Users\Mari\PS_Lab_FS> cd..
+14.PS C:\Users\Mari> Remove-Item -Path"C:\Users\Mari\PS_Lab_FS"  (удаляем тестовую папку PS_Lab_FS)
